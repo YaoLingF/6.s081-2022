@@ -10,17 +10,15 @@ int main()
         char buffer[1];
         read(p[0],buffer,1);
 
-        write(p[1],buffer,1);
-
         fprintf(1,"%d: received ping\n",getpid());
+        write(p[1],buffer,1);
     }
     else//parent
     {
-        char buffer[] = {'a'};
+        char buffer[1];
         
         write(p[1],buffer,1);
 
-        wait(0);
 
         read(p[0],buffer,1);
 
