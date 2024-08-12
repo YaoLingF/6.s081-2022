@@ -19,7 +19,7 @@ int main()
         
         write(p[1],buffer,1);
 
-
+        wait(0);
         read(p[0],buffer,1);
 
         fprintf(1,"%d: received pong\n",getpid());
